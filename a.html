@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            background-color: #2b2b2b;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .stand-container {
+            width: 300px;
+            height: 1200px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            border: 2px solid #4C0856;
+            overflow: hidden;
+        }
+
+        .header {
+            background-color: #4C0856;
+            color: white;
+            padding: 25px 15px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 18px;
+            margin: 0 0 10px 0;
+            text-transform: uppercase;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            padding-bottom: 5px;
+        }
+
+        .header p {
+            font-size: 13px;
+            line-height: 1.4;
+            text-align: center;
+            margin: 0;
+        }
+
+        .content {
+            padding: 15px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Элементтерді бүкіл бойына созу үшін */
+        }
+
+        .section-title {
+            background-color: #4C0856;
+            color: white;
+            font-size: 12px;
+            padding: 6px;
+            margin: 10px 0;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .text-small {
+            font-size: 11.5px;
+            line-height: 1.4;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .formula-box {
+            background-color: #f7eff7;
+            border: 1px solid #4C0856;
+            padding: 12px;
+            margin: 5px 0;
+            text-align: center;
+            font-family: "Times New Roman", serif;
+            font-size: 17px;
+            font-style: italic;
+            font-weight: bold;
+            color: #4C0856;
+        }
+
+        .example-box {
+            border: 1px solid #ddd;
+            padding: 10px;
+            background-color: #fffcf0;
+            font-size: 11px;
+            margin-top: 5px;
+        }
+
+        .example-title {
+            font-weight: bold;
+            color: #c0392b;
+            margin-bottom: 4px;
+            display: block;
+        }
+
+        .footer {
+            height: 40px;
+            background-color: #4C0856;
+        }
+
+        b { color: #4C0856; }
+    </style>
+</head>
+<body>
+
+<div class="stand-container">
+    <div class="header">
+        <h1>Зерттеу мақсаты:</h1>
+        <p>Несие беру процесінде қолданылатын қаржылық-математикалық әдістерді жүйелеу және олардың тәжірибелік тиімділігін айқындау.</p>
+    </div>
+
+    <div class="content">
+        <div>
+            <div class="section-title">Жай пайыз мөлшерлемелері</div>
+            <p class="text-small"><b>Жай пайыздық есептеу</b> – қысқа мерзімді қарыздарды, несиені (1 жылға дейін) бергенде қолданылады.</p>
+            <div class="formula-box">S = P + I</div>
+            <div class="formula-box">I = Pni</div>
+            
+            <div class="example-box">
+                <span class="example-title">Мысал 1 (суреттен):</span>
+                P=100 000 тг, i=10,5%, t=148 күн.<br>
+                S = 100 000 * (1 + 148/365 * 0,105) = <b>104 258 тг.</b>
+            </div>
+        </div>
+
+        <div>
+            <div class="section-title">Күрделі пайыз әдістері</div>
+            <p class="text-small">Күрделі пайыз жинақталған сомаға пайыздардың қосылуы арқылы есептеледі (капитализация).</p>
+            <div class="formula-box">S = P(1 + i)<sup>n</sup></div>
+            
+            <div class="example-box">
+                <span class="example-title">Мысал 3 (суреттен):</span>
+                P=5000 тг, n=2 жыл, i=15%.<br>
+                S = 5000 * (1 + 0,15)<sup>2</sup> = <b>6612,5 тг.</b>
+            </div>
+        </div>
+
+        <div>
+            <div class="section-title">Мерзімге байланысты формулалар</div>
+            <p class="text-small">Айлармен есептегенде (n' = 12):</p>
+            <div class="formula-box">S = P(1 + mi / n')</div>
+            
+            <p class="text-small">Күндермен есептегенде:</p>
+            <div class="formula-box">S = P(1 + ti / K)</div>
+            
+            <p class="text-small">Бір айдағы табыс үшін:</p>
+            <div class="formula-box">I = (P * i) / (12 * 100)</div>
+        </div>
+
+        <div>
+            <div class="section-title">Әдістерді салыстыру</div>
+            <p class="text-small">1. Мерзім 1 жылдан кем болса: <b>Жай пайыз > Күрделі пайыз</b></p>
+            <p class="text-small">2. Мерзім 1 жылдан көп болса: <b>Жай пайыз < Күрделі пайыз</b></p>
+            <p class="text-small">3. Мерзім 1 жыл болса: <b>Нәтижелер тең</b></p>
+        </div>
+    </div>
+
+    <div class="footer"></div>
+</div>
+
+</body>
+</html>
