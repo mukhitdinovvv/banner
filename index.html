@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            background-color: #2b2b2b; /* Скриншотта анық көрінуі үшін сыртқы фон күңгірт */
+            display: flex;
+            justify-content: center;
+            padding: 50px;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        /* Нақты 60x120 пропорциясы (600px x 1200px) */
+        .stand-container {
+            width: 600px;
+            height: 1200px;
+            background-color: white;
+            box-shadow: 0 0 50px rgba(0,0,0,0.5);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #000;
+        }
+
+        /* Жоғарғы бөлім - Зерттеу міндеті */
+        .header {
+            background-color: #4C0856;
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            margin: 0 0 20px 0;
+            text-transform: uppercase;
+            border-bottom: 2px solid rgba(255,255,255,0.3);
+            padding-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 16px;
+            line-height: 1.4;
+            text-align: justify;
+            margin: 0;
+            font-weight: 300;
+        }
+
+        /* Негізгі контент */
+        .main-content {
+            padding: 30px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .title-banner {
+            color: #4C0856;
+            font-size: 22px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            border-left: 10px solid #4C0856;
+            border-right: 10px solid #4C0856;
+            padding: 10px;
+        }
+
+        .section {
+            margin-bottom: 25px;
+        }
+
+        .section-h2 {
+            background-color: #4C0856;
+            color: white;
+            font-size: 18px;
+            padding: 8px 15px;
+            margin-bottom: 15px;
+            border-radius: 0 20px 20px 0;
+            display: inline-block;
+        }
+
+        .text-box {
+            font-size: 14.5px;
+            line-height: 1.5;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        /* Формула дизайны */
+        .formula-box {
+            background-color: #f4eaf6; /* Негізгі түстің ашық нұсқасы */
+            border: 1px dashed #4C0856;
+            padding: 20px;
+            margin: 10px 0;
+            text-align: center;
+            font-family: "Times New Roman", serif;
+            font-size: 24px;
+            font-style: italic;
+            font-weight: bold;
+            color: #4C0856;
+            position: relative;
+        }
+
+        .formula-num {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 14px;
+            font-style: normal;
+            font-family: Arial;
+            color: #888;
+        }
+
+        .footer-decoration {
+            height: 60px;
+            background-color: #4C0856;
+            width: 100%;
+            margin-top: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .white-line {
+            width: 60%;
+            height: 1px;
+            background-color: rgba(255,255,255,0.4);
+        }
+
+        i { color: #666; font-size: 13px; }
+    </style>
+</head>
+<body>
+
+<div class="stand-container">
+    <div class="header">
+        <h1>Зерттеу міндеті:</h1>
+        <p>
+            Қаржылық математика әдістерін теориялық тұрғыдан жүйелеу; 
+            несиелеуде қолданылатын негізгі есептеу тәсілдерін (пайыздық мөлшерлемелер, аннуитеттік және дисконттық формулалар) талдау; 
+            банк секторындағы математикалық модельдердің қолданылу ерекшеліктерін қарастыру.
+        </p>
+    </div>
+
+    <div class="main-content">
+        <div class="title-banner">Қаржылық математика әдістері</div>
+
+        <div class="section">
+            <div class="section-h2">Жай пайыз мөлшерлемелері</div>
+            <div class="text-box">
+                Жай пайыздық есептеу – қысқа мерзімді қарыздарды, несиені (1 жылға дейін) бергенде қолданылады.
+            </div>
+            
+            <div class="formula-box">
+                S = P + I <span class="formula-num">(1)</span>
+            </div>
+            
+            <div class="formula-box">
+                I = Pni <span class="formula-num">(2)</span>
+            </div>
+
+            <div class="text-box" style="margin-top:10px;">
+                1 жылдан кейінгі жинақталған сома:
+            </div>
+            <div class="formula-box">
+                S = P(1 + i) <span class="formula-num">(2,1)</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-h2">Мерзімдік есептеулер</div>
+            <div class="text-box">Жылдар саны (n) бойынша өсірілген сома:</div>
+            <div class="formula-box">
+                S = P(1 + ni) <span class="formula-num">(3)</span>
+            </div>
+
+            <div class="text-box">Айлармен (m) немесе күндермен (t) есептеу:</div>
+            <div class="formula-box" style="font-size: 21px;">
+                S = P(1 + mi / 12) <span class="formula-num">(4)</span>
+            </div>
+            
+            <div class="formula-box" style="font-size: 21px;">
+                S = P(1 + ti / K) <span class="formula-num">(5)</span>
+            </div>
+            
+            <center><i>*K – бір жылдағы күн саны (360, 365 немесе 366).</i></center>
+            
+            <div class="text-box" style="margin-top:15px;">Бір айдағы табыс (I):</div>
+            <div class="formula-box">
+                I = (P * i) / (12 * 100) <span class="formula-num">(6)</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-decoration">
+        <div class="white-line"></div>
+    </div>
+</div>
+
+</body>
+</html>
