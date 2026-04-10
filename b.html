@@ -37,19 +37,27 @@
             padding-bottom: 5px;
         }
 
+        .header-section ul {
+            text-align: left;
+            font-size: 10.5px;
+            margin: 0;
+            padding-left: 15px;
+            line-height: 1.5;
+        }
+
         .content {
-            padding: 10px;
+            padding: 12px;
             flex-grow: 1;
             display: flex;
             flex-direction: column;
-            justify-content: space-between; /* Блоктарды бүкіл бойына созу */
+            justify-content: space-between;
         }
 
         .section-bar {
             background-color: #4C0856;
             color: white;
             font-size: 11px;
-            padding: 6px;
+            padding: 8px;
             text-align: center;
             text-transform: uppercase;
             font-weight: bold;
@@ -57,11 +65,11 @@
         }
 
         .text-block {
-            font-size: 10.5px;
+            font-size: 11px;
             line-height: 1.4;
             color: #222;
             text-align: justify;
-            margin: 0 0 8px 0;
+            margin-bottom: 8px;
         }
 
         .formula-box {
@@ -75,62 +83,41 @@
             color: #4C0856;
             text-decoration: none;
             display: block;
-            margin-bottom: 10px;
         }
 
-        /* ГИПЕРСИЛТЕМЕЛІ ФОТО ЖӘНЕ QR */
-        .img-link-container {
-            text-decoration: none;
-            display: block;
-            margin: 5px 0;
-        }
-
-        .photo-placeholder {
+        /* САЛЫСТЫРУ КЕСТЕСІ */
+        .comparison-table {
             width: 100%;
-            height: 130px;
-            border: 2px dashed #4C0856;
-            background-color: #f9f9f9;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: #4C0856;
-            font-size: 11px;
-            text-align: center;
-        }
-
-        .qr-section {
-            border: 2px solid #4C0856;
-            padding: 10px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            background-color: #fdf2ff;
-        }
-
-        .qr-image-placeholder {
-            width: 80px;
-            height: 80px;
-            background-color: #000; /* Бұл жерге QR суретін қоясыз */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
+            border-collapse: collapse;
+            margin: 10px 0;
             font-size: 10px;
         }
 
-        /* СТАТИСТИКА ГРАФИГІ */
+        .comparison-table th {
+            background-color: #4C0856;
+            color: white;
+            padding: 6px;
+            border: 1px solid #fff;
+        }
+
+        .comparison-table td {
+            border: 1px solid #4C0856;
+            padding: 6px;
+            text-align: center;
+        }
+
+        /* ГРАФИК */
         .chart-box {
             border: 1px solid #4C0856;
             padding: 10px;
-            margin-top: 5px;
+            background-color: #fcfaff;
         }
 
         .bars {
             display: flex;
             align-items: flex-end;
             justify-content: space-around;
-            height: 80px;
+            height: 90px;
             border-bottom: 2px solid #4C0856;
             margin-bottom: 30px;
         }
@@ -144,8 +131,7 @@
         .bar-val {
             position: absolute;
             top: -18px;
-            left: 0;
-            right: 0;
+            width: 100%;
             text-align: center;
             font-size: 10px;
             font-weight: bold;
@@ -155,12 +141,25 @@
         .bar-title {
             position: absolute;
             bottom: -25px;
-            left: -10px;
-            right: -10px;
+            width: 60px;
+            left: -12px;
             text-align: center;
             font-size: 9px;
             font-weight: bold;
-            color: #333;
+        }
+
+        .photo-link {
+            width: 100%;
+            height: 140px;
+            border: 2px dashed #4C0856;
+            background-color: #f9f9f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #4C0856;
+            font-size: 12px;
+            text-align: center;
         }
 
         .footer {
@@ -176,66 +175,75 @@
 <div class="stand-container">
     <div class="header-section">
         <h1>Зерттеу әдістері</h1>
-        <p style="font-size: 10px; margin-top: 5px;">Зерттеу барысында келесі ғылыми тәсілдер қолданылды:</p>
-        <ul style="text-align: left; font-size: 10px; line-height: 1.6;">
-            <li>1. Теориялық-талдамалық әдіс (әдебиеттер мен нормативтік құжаттарды жүйелеу).</li>
-            <li>2. Салыстырмалы талдау (әртүрлі банктердің несиелік өнімдерін зерттеу).</li>
-            <li>3. Экономикалық-математикалық әдіс (пайыздық мөлшерлемелерді есептеу модельдері).</li>
+        <ul>
+            <li>• Теориялық-талдамалық әдіс (әдебиеттер мен құжаттар)</li>
+            <li>• Салыстырмалы талдау (банк өнімдерінің тиімділігі)</li>
+            <li>• Экономикалық-математикалық модельдеу</li>
         </ul>
     </div>
 
     <div class="content">
         <div>
-            <div class="section-bar">Жай пайыздық есептеулер</div>
-            <p class="text-block">Жай пайыздық есептеу — қысқа мерзімді қарыздарды, несиені (1 жылға дейін) бергенде немесе пайыздар негізгі сомаға қосылмай бөлек төленгенде қолданылады.</p>
+            <div class="section-bar">Жай пайыз мөлшерлемесі</div>
+            <p class="text-block">Жай пайыз қысқа мерзімді несиелерді есептеуде қолданылады. Пайыздар тек негізгі қарызға есептеледі.</p>
             <a href="image_511962.png" class="formula-box">S = P(1 + ni)</a>
         </div>
 
         <div>
-            <div class="section-bar">Жұмыс барысы</div>
-            <a href="image_51fa81.jpg" class="img-link-container">
-                <div class="photo-placeholder">
-                    <b>[ЖҰМЫС БАРЫСЫ ФОТОСЫ]</b><br>
-                    Суретті ашу үшін басыңыз
-                </div>
-            </a>
-            <p class="text-block" style="text-align:center; font-style:italic; font-size: 9px;">Зерттеу деректерін өңдеу және модельдеу сәті.</p>
+            <div class="section-bar">Банктерді салыстырмалы талдау</div>
+            <p class="text-block">100 000 тг депозитті 1 жылға салғандағы нәтиже (i=14%):</p>
+            <table class="comparison-table">
+                <tr>
+                    <th>Көрсеткіш</th>
+                    <th>Kaspi (Жай)</th>
+                    <th>Halyk (Күрделі)</th>
+                </tr>
+                <tr>
+                    <td>Бастапқы сома</td>
+                    <td>100 000 тг</td>
+                    <td>100 000 тг</td>
+                </tr>
+                <tr>
+                    <td><b>Жалпы табыс</b></td>
+                    <td><b>114 000 тг</b></td>
+                    <td><b>114 900 тг</b></td>
+                </tr>
+            </table>
+            <p class="text-block" style="font-size: 9px; font-style: italic;">*Күрделі пайыз әдісі бойынша Halyk Bank-те табыс 900 теңгеге жоғары.</p>
         </div>
 
         <div>
-            <div class="section-bar">Күрделі пайыз әдістері</div>
-            <p class="text-block">Күрделі пайыз әдісінде пайыздар негізгі қарыз сомасына қосылып отырады (капитализация), бұл ұзақ мерзімді депозиттер мен несиелер үшін тиімді.</p>
+            <div class="section-bar">Жұмыс барысы</div>
+            <a href="image_51fa81.jpg" class="photo-link">
+                <b>ФОТО: Модельдеу кезеңі</b><br>
+                (Ашу үшін басыңыз)
+            </a>
+        </div>
+
+        <div>
+            <div class="section-bar">Күрделі пайыз формуласы</div>
+            <p class="text-block">Капитализация арқылы жинақталған соманы есептеу модельдері:</p>
             <a href="image_51865d.jpg" class="formula-box">S = P(1 + i)<sup>n</sup></a>
         </div>
 
         <div>
-            <div class="section-bar">Статистикалық талдау</div>
+            <div class="section-bar">Зерттеу статистикасы</div>
             <div class="chart-box">
-                <p class="text-block" style="font-weight:bold; text-align:center;">Оқушылардың қаржылық сауаттылық деңгейі:</p>
+                <p class="text-block" style="font-weight:bold; text-align:center;">Оқушылардың білім деңгейі:</p>
                 <div class="bars">
-                    <div class="bar" style="height: 70px;"><span class="bar-val">29.45%</span><span class="bar-title">1-деңгей</span></div>
-                    <div class="bar" style="height: 45px;"><span class="bar-val">16.13%</span><span class="bar-title">2-деңгей</span></div>
+                    <div class="bar" style="height: 75px;"><span class="bar-val">29.45%</span><span class="bar-title">1-деңгей</span></div>
+                    <div class="bar" style="height: 50px;"><span class="bar-val">16.13%</span><span class="bar-title">2-деңгей</span></div>
                     <div class="bar" style="height: 25px;"><span class="bar-val">6.03%</span><span class="bar-title">3-деңгей</span></div>
                 </div>
-                <p class="text-block" style="font-size: 9px; margin-top: 5px;">Зерттеу нәтижесі көрсеткендей, оқушылардың тек <b>20%-ы</b> ғана күрделі қаржылық модельдерді өз бетінше есептей алады.</p>
+                <p class="text-block" style="font-size: 9.5px;">Сараптама көрсеткендей, оқушылардың <b>20%-ы</b> ғана қаржылық модельдерді толық меңгерген.</p>
             </div>
         </div>
 
         <div>
-            <div class="section-bar">Жобаның практикасы: Telegram Бот</div>
-            <a href="https://t.me/FinanceCalcBot" class="img-link-container">
-                <div class="qr-section">
-                    <div class="qr-image-placeholder">QR CODE</div>
-                    <div class="text-block">
-                        <b>@FinanceCalcBot</b> әзірленді. Бот несие мен депозит бойынша есептеулерді автоматты түрде орындайды. Ботқа өту үшін <b>QR-ды басыңыз</b>.
-                    </div>
-                </div>
-            </a>
-        </div>
-
-        <div>
             <div class="section-bar">Қорытынды</div>
-            <p class="text-block" style="background-color: #f9f9f9; padding: 5px;">Зерттеу нәтижесінде депозит үшін <b>Halyk Bank</b> (күрделі пайыз) тиімді екені, ал несие алуда <b>Kaspi Bank</b> (жай пайыз) жалпы төлемді азайтуға мүмкіндік беретіні анықталды.</p>
+            <p class="text-block" style="background-color: #f9f9f9; padding: 5px; border-left: 3px solid #4C0856;">
+                Депозит үшін <b>Halyk Bank</b> тиімді, ал несие алуда төлемді азайту үшін <b>Kaspi Bank</b> жай пайыздық моделі қолайлы екені дәлелденді.
+            </p>
         </div>
     </div>
 
