@@ -13,7 +13,7 @@
 
         .stand-container {
             width: 300px;
-            height: 1200px;
+            height: 1350px; /* Мысалдар толық болғандықтан биіктігі сәл ұзартылды */
             background-color: white;
             display: flex;
             flex-direction: column;
@@ -24,12 +24,12 @@
         .header {
             background-color: #4C0856;
             color: white;
-            padding: 20px 15px;
+            padding: 25px 15px;
             text-align: center;
         }
 
         .header h1 {
-            font-size: 16px;
+            font-size: 18px;
             margin: 0 0 10px 0;
             text-transform: uppercase;
             border-bottom: 1px solid rgba(255,255,255,0.3);
@@ -37,13 +37,14 @@
         }
 
         .header p {
-            font-size: 11px;
+            font-size: 13px;
             line-height: 1.4;
+            text-align: center;
             margin: 0;
         }
 
         .content {
-            padding: 10px;
+            padding: 15px;
             flex-grow: 1;
             display: flex;
             flex-direction: column;
@@ -53,129 +54,121 @@
         .section-title {
             background-color: #4C0856;
             color: white;
-            font-size: 11px;
-            padding: 5px;
-            margin: 8px 0;
+            font-size: 12px;
+            padding: 6px;
+            margin: 10px 0;
             text-align: center;
             text-transform: uppercase;
         }
 
         .text-small {
-            font-size: 10.5px;
-            line-height: 1.3;
+            font-size: 11px;
+            line-height: 1.4;
             color: #333;
-            margin-bottom: 4px;
+            margin-bottom: 5px;
         }
 
         .formula-box {
             background-color: #f7eff7;
             border: 1px solid #4C0856;
-            padding: 8px;
-            margin: 4px 0;
+            padding: 10px;
+            margin: 5px 0;
             text-align: center;
             font-family: "Times New Roman", serif;
-            font-size: 15px;
+            font-size: 16px;
+            font-style: italic;
             font-weight: bold;
             color: #4C0856;
         }
 
         .example-box {
             border: 1px solid #ddd;
-            padding: 8px;
+            padding: 12px;
             background-color: #fffcf0;
-            font-size: 10px;
-            margin-top: 4px;
+            font-size: 10.5px;
+            margin-top: 5px;
+            line-height: 1.5;
         }
 
         .example-title {
             font-weight: bold;
             color: #c0392b;
-            margin-bottom: 3px;
+            margin-bottom: 6px;
             display: block;
-            text-decoration: underline;
+            border-bottom: 1px solid #f0e0b0;
         }
 
-        .bot-box {
-            background-color: #e3f2fd;
-            border: 1px solid #0088cc;
-            padding: 8px;
-            text-align: center;
-            margin: 5px 0;
-        }
-
-        .bot-link {
-            color: #0088cc;
-            font-weight: bold;
-            text-decoration: none;
-            font-size: 11px;
+        .step {
+            margin-bottom: 4px;
+            display: block;
         }
 
         .footer {
-            height: 30px;
+            height: 40px;
             background-color: #4C0856;
         }
 
         b { color: #4C0856; }
-        .solution-text { font-style: italic; color: #555; }
     </style>
 </head>
 <body>
 
 <div class="stand-container">
     <div class="header">
-        <h1>Зерттеу мақсаты</h1>
-        <p>Несие беру процесіндегі қаржылық-математикалық әдістерді жүйелеу және олардың тәжірибелік тиімділігін айқындау[cite: 153].</p>
+        <h1>Зерттеу мақсаты:</h1>
+        <p>Несие беру процесінде қолданылатын қаржылық-математикалық әдістерді жүйелеу және олардың тәжірибелік тиімділігін айқындау. [cite: 13]</p>
     </div>
 
     <div class="content">
         <div>
-            <div class="section-title">Жай пайыз мөлшерлемесі</div>
-            <p class="text-small">Қысқа мерзімді қарыздарды (1 жылға дейін) есептеу үшін қолданылады[cite: 163].</p>
-            <div class="formula-box">S = P(1 + ni)</div>
+            <div class="section-title">Жай пайыз мөлшерлемелері</div>
+            <p class="text-small">Қысқа мерзімді қарыздарды немесе несиені (1 жылға дейін) бергенде қолданылады. [cite: 23]</p>
+            <div class="formula-box">S = P(1 + (t/K) * i) [cite: 46]</div>
+            
             <div class="example-box">
-                <span class="example-title">Мысал 1[cite: 191, 192]:</span>
-                <b>Берілгені:</b> P = 100 000 тг, i = 10,5%, t = 148 күн, K = 365.<br>
-                <b>Табу керек:</b> S - ?<br>
-                <b>Шешуі[cite: 197]:</b><br>
-                <span class="solution-text">S = 100 000 * (1 + 148/365 * 0,105)</span><br>
-                <b>Жауабы:</b> 104 258 тг.
+                <span class="example-title">Мысал 1 (Презентация бойынша): [cite: 51, 52]</span>
+                <span class="step"><b>Берілгені:</b></span>
+                <span class="step">P (несие) = 100 000 тг</span>
+                <span class="step">i (жылдық пайыз) = 10,5% (0,105)</span>
+                <span class="step">Мерзімі: 20 қаңтардан 17 маусымға дейін</span>
+                <span class="step"><b>Шешуі:</b></span>
+                <span class="step">1. Күн санын есептеу: t = 149 - 1 = 148 күн </span>
+                <span class="step">2. S = 100 000 * (1 + (148/365) * 0,105) </span>
+                <span class="step">3. S = 100 000 * (1 + 0,4054 * 0,105)</span>
+                <span class="step"><b>Жауабы:</b> S = 104 258 тг. </span>
             </div>
         </div>
 
         <div>
-            <div class="section-title">Күрделі пайыз әдісі</div>
-            <p class="text-small">Пайыздардың негізгі сомаға қосылуы (капитализация) арқылы есептеледі[cite: 198, 207].</p>
-            <div class="formula-box">S = P(1 + i)ⁿ</div>
+            <div class="section-title">Күрделі пайыз әдістері</div>
+            <p class="text-small">Жинақталған сомаға пайыздардың қосылуы (капитализация) арқылы есептеледі. [cite: 58]</p>
+            <div class="formula-box">S = P * (1 + i)<sup>n</sup> [cite: 68]</div>
+            
             <div class="example-box">
-                <span class="example-title">Мысал 3[cite: 210, 211]:</span>
-                <b>Берілгені:</b> P = 5 000 тг, n = 2 жыл, i = 15%.<br>
-                <b>Табу керек:</b> S - ?<br>
-                <b>Шешуі[cite: 215]:</b><br>
-                <span class="solution-text">S = 5 000 * (1 + 0,15)² = 5 000 * 1,3225</span><br>
-                <b>Жауабы:</b> 6 612,5 тг.
+                <span class="example-title">Мысал 3 (Презентация бойынша): [cite: 70, 71]</span>
+                <span class="step"><b>Берілгені:</b></span>
+                <span class="step">P (бастапқы сома) = 5 000 тг</span>
+                <span class="step">n (мерзімі) = 2 жыл</span>
+                <span class="step">i (жылдық пайыз) = 15% (0,15)</span>
+                <span class="step"><b>Шешуі:</b></span>
+                <span class="step">1. S = 5 000 * (1 + 0,15)<sup>2</sup> </span>
+                <span class="step">2. S = 5 000 * (1,15)<sup>2</sup></span>
+                <span class="step">3. S = 5 000 * 1,3225</span>
+                <span class="step"><b>Жауабы:</b> S = 6 612,5 тг. </span>
             </div>
         </div>
 
         <div>
-            <div class="section-title">Жобаның маңыздылығы</div>
-            <p class="text-small"><b>Ғылыми:</b> Қаржылық есептеулер жүйеленді, пайыздар математикалық дәлелденді.</p>
-            <p class="text-small"><b>Кәсіби:</b> Экономикалық бағыт талданды, банк өнімдері салыстырылды.</p>
-            <p class="text-small"><b>Практикалық:</b> Тиімді таңдау жасау (Kaspi vs Halyk) анықталды.</p>
+            <div class="section-title">Әдістерді салыстыру</div>
+            <p class="text-small">1. Мерзім <b>1 жылдан кем</b> болса: <br>Жай пайыз > Күрделі пайыз [cite: 76, 77]</p>
+            <p class="text-small">2. Мерзім <b>1 жылдан көп</b> болса: <br>Жай пайыз < Күрделі пайыз [cite: 78, 79]</p>
+            <p class="text-small">3. Мерзім <b>1 жыл</b> болса: <br>Нәтижелер тең [cite: 80, 81]</p>
         </div>
 
         <div>
-            <div class="section-bar" style="background-color:#0088cc; color:white; font-size:11px; text-align:center; padding:5px;">ЦИФРЛЫҚ ШЕШІМ</div>
-            <div class="bot-box">
-                <p class="text-small" style="margin-bottom:5px;">Есептеулерді автоматтандыру үшін Telegram бот әзірленді:</p>
-                <a href="https://t.me/FINANCE_SUPPORT_GJ_BOT" class="bot-link">t.me/FINANCE_SUPPORT_GJ_BOT</a>
-            </div>
-        </div>
-
-        <div>
-            <div class="section-title">Әдістерді салыстыру [cite: 216-221]</div>
-            <p class="text-small">• Мерзім < 1 жыл: <b>Жай пайыз тиімдірек</b></p>
-            <p class="text-small">• Мерзім > 1 жыл: <b>Күрделі пайыз тиімдірек</b></p>
-            <p class="text-small"><b>Қорытынды:</b> Депозит үшін <b>Halyk Bank</b>, несие үшін <b>Kaspi Bank</b> тиімді.</p>
+            <div class="section-title">Тәжірибелік қорытынды</div>
+            <p class="text-small">• <b>Депозит:</b> Halyk Bank күрделі пайызы арқылы көбірек пайда береді. </p>
+            <p class="text-small">• <b>Несие:</b> Kaspi Bank жай пайызы төлемді азайтып, тиімдірек болады. </p>
         </div>
     </div>
 
